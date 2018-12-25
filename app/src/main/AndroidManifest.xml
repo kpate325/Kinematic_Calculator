@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Graph" />
-        <activity android:name=".Results" />
+        <activity android:name=".Graph" />
     </application>
 
 </manifest>

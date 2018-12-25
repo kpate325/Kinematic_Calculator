@@ -11,14 +11,14 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
-public class Results extends AppCompatActivity {
+public class Graph extends AppCompatActivity {
 
     LineGraphSeries<DataPoint> series;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_results);
+        setContentView(R.layout.activity_graph);
 
         Intent intent = getIntent();
         double t, vi, a;

@@ -39,7 +39,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text='(In "Variable", type in "iVel" for initial velocity, "fVel" for final velocity, "Accel" for acceleration, "Time" for time, and "Disp" for displacement.)'
+        android:text='(In "Variable", type in "ivel" for initial velocity, "fvel" for final velocity, "accel" for acceleration, "time" for time, and "disp" for displacement.)'
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -164,8 +164,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@color/Button"
         android:onClick="buttonOnClick"
         android:text="GRAPH"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Calculate"
         app:layout_constraintTop_toTopOf="@+id/Calculate" />
@@ -177,8 +179,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:background="@color/Button"
         android:onClick="buttonOnClick"
         android:text="Calculate"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Dispinp" />
 
@@ -217,7 +221,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="1dp"
         android:gravity="center_vertical"
-        android:text="Find :"
+        android:text="Variable to Find :"
         android:textAllCaps="false"
         android:textColor="#ff000000"
         android:textSize="18sp"

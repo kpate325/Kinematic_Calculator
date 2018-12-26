@@ -7,9 +7,10 @@
     android:layout_height="match_parent">
 
     <com.jjoe64.graphview.GraphView
+        android:id="@+id/plot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/plot"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/ReturnButton"
@@ -19,7 +20,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorPrimaryDark"
         android:text="Return Home"
         app:layout_constraintBottom_toBottomOf="@+id/plot"
         app:layout_constraintEnd_toEndOf="parent"

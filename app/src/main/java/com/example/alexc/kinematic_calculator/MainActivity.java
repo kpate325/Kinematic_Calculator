@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             double convTime = Double.parseDouble(t);
             transfer(""+convTime, ""+convInitialVel,""+convAcceleration);
         }
-        return"hello";
+        return"First Calculate Before Graphing";
     }
 
     public String kinematics(String vi, String vf, String a, String t, String d, String var) {

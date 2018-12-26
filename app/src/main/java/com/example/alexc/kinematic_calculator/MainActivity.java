@@ -1,5 +1,4 @@
 package com.example.alexc.kinematic_calculator;
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,29 +8,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 public class MainActivity extends AppCompatActivity {
     private String iVel, tim, acc;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Button graphBtn = findViewById(R.id.results);
         graphBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Button results = (Button) v;
-                String initialVelocity = ((EditText) findViewById(R.id.InitialVinp)).getText().toString();
-                String acceleration = ((EditText) findViewById(R.id.Accinp)).getText().toString();
-                String time = ((EditText) findViewById(R.id.Timeinp)).getText().toString();
-
-                String calculateKinEquation = kinematic(initialVelocity, acceleration, time);
-                TextView output = (TextView) findViewById(R.id.Results);
-                output.setText(calculateKinEquation);
-
                 try {
                     if (!(Double.parseDouble(tim) < 0)) {
                         Intent startIntent = new Intent(MainActivity.this, Graph.class);
@@ -57,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         tim = t;
         acc = a;
     }
-
     public void buttonOnClick(View v) {
 
         Button Calculate = (Button) v;
@@ -67,30 +52,13 @@ public class MainActivity extends AppCompatActivity {
         String time = ((EditText) findViewById(R.id.Timeinp)).getText().toString();
         String displacement = ((EditText) findViewById(R.id.Dispinp)).getText().toString();
         String variable = ((EditText) findViewById(R.id.Variableinp)).getText().toString();
-
-
-
         String calculateKinEquation = kinematics(initialVelocity, finalVelocity, acceleration, time, displacement, variable);
         TextView output = (TextView) findViewById(R.id.Results);
         output.setText(calculateKinEquation);
-
         String usedKinEquation = usedKinematics(initialVelocity, finalVelocity, acceleration, time, displacement, variable);
         TextView eqOutput = (TextView) findViewById(R.id.equationResult);
         eqOutput.setText(usedKinEquation);
-
-
     }
-
-    public String kinematic(String vi, String a, String t) {
-        if (!vi.equals("") && !a.equals("") && !t.equals("")) {
-            double convInitialVel = Double.parseDouble(vi);
-            double convAcceleration = Double.parseDouble(a);
-            double convTime = Double.parseDouble(t);
-            transfer(""+convTime, ""+convInitialVel,""+convAcceleration);
-        }
-        return"First Calculate Before Graphing";
-    }
-
     public String kinematics(String vi, String vf, String a, String t, String d, String var) {
         try {
             if ((var.equals("ivel") && !vi.equals("")) || (var.equals("fvel") && !vf.equals(""))|| (var.equals("accel") && !a.equals("")) || (var.equals("time") && !t.equals("")) || (var.equals("disp") && !d.equals(""))) {
